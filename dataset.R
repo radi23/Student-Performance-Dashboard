@@ -8,9 +8,6 @@ studentsPerf <- read.csv("D:/dataset/StudentsPerformance.csv",sep = ",")
 View(studentsPerf)
 str(studentsPerf)
 summary(studentsPerf)
-summary(male)
-summary(female)
-summary(All)
 names(studentsPerf)
 
 # mnghapus kolom lunch
@@ -31,6 +28,11 @@ female <- mutate(female,
 All <- studentsPerf
 All <- mutate(All,
               Total_Scores = Math_Score+Reading_Score+Writing_Score)
+
+## ringkasan dataset baru
+summary(male)
+summary(female)
+summary(All)
 
 matrix <- matrix(c(197.5,208.7,203.3),nrow = 3,ncol = 1)
 matrix
